@@ -2,10 +2,13 @@
 
 @section('content')
     <div class="space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-            <div>
-                <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Manajemen Data Mahasiswa</h1>
-                <p class="text-sm text-slate-500">Kelola informasi data mahasiswa Anda dengan lebih mudah.</p>
+        <div class="flex flex-col md:flex-row md:items-center md:justify-center gap-4 p-4 md:p-16">
+            <div class="max-w-4xl mx-auto text-center space-y-6">
+                <h1 class="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">Manajemen Data Mahasiswa</h1>
+                <p class="text-sm md:text-lg text-slate-500">Kelola seluruh informasi mahasiswa dengan lebih mudah, cepat,
+                    dan
+                    terstruktur. Sistem ini membantu Anda menyimpan, mengelola, memperbarui, serta mencari data mahasiswa
+                    secara efisien dalam satu platform yang terintegrasi.</p>
             </div>
         </div>
 

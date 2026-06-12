@@ -93,7 +93,6 @@
 </nav>
 
 <script>
-    // Event listener to close the profile dropdown when clicking outside of it
     document.addEventListener('click', function(event) {
         const dropdown = document.getElementById('user-dropdown');
         const button = document.getElementById('user-menu-button');
