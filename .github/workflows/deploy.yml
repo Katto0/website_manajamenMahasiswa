@@ -84,9 +84,6 @@ jobs:
       - name: 📦 Install Composer dependencies (production)
         run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev --ignore-platform-reqs
 
-      - name: 🤐 Kompres folder vendor menjadi ZIP
-        run: zip -r vendor.zip vendor
-
       - name: 🟢 Setup Node.js
         uses: actions/setup-node@v4
         with:
