@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Manajemen Mahasiswa - MahasiswaHub">
+    <meta name="keywords" content="mahasiswa, data mahasiswa, mahasiswahub, manajemen mahasiswa">
+    <meta name="author" content="MahasiswaHub">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Sistem Informasi Data Mahasiswa">
+    <meta property="og:description" content="Website Manajemen Mahasiswa - MahasiswaHub">
+    <meta property="og:image" content="{{ asset('images/logo.webp') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Sistem Informasi Data Mahasiswa">
+    <meta property="twitter:description" content="Website Manajemen Mahasiswa - MahasiswaHub">
+    <meta property="twitter:image" content="{{ asset('images/logo.webp') }}">
+
     <title>Sistem Informasi Data Mahasiswa</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="{{ asset('images/logo.webp') }}">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 

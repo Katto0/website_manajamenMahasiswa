@@ -4,7 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login ke Portal Manajemen Mahasiswa - MahasiswaHub">
+    <meta name="keywords" content="login, mahasiswahub, mahasiswa, manajemen mahasiswa">
+    <meta name="author" content="MahasiswaHub">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="Login - MahasiswaHub">
+    <meta property="og:description" content="Login ke Portal Manajemen Mahasiswa - MahasiswaHub">
+    <meta property="og:image" content="{{ asset('images/logo.webp') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="Login - MahasiswaHub">
+    <meta property="twitter:description" content="Login ke Portal Manajemen Mahasiswa - MahasiswaHub">
+    <meta property="twitter:image" content="{{ asset('images/logo.webp') }}">
+
     <title>Login - MahasiswaHub</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="{{ asset('images/logo.webp') }}">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
@@ -96,7 +117,7 @@
             <div
                 class="relative w-80 h-80 md:w-96 md:h-96 rounded-t-full overflow-hidden bg-sky-100 flex items-end justify-center shadow-lg border border-slate-100">
                 <img src="{{ asset('images/login_student_illustration.webp') }}" alt="Ilustrasi Mahasiswa"
-                    class="w-full h-full object-cover">
+                    class="w-full h-full object-cover" loading="lazy">
             </div>
 
         </div>

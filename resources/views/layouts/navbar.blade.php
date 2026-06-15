@@ -2,7 +2,7 @@
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="{{ route('mahasiswa.index') }}" class="flex items-center gap-2.5">
 
-            <img src="{{ asset('images/logo.webp') }}" alt="" class="w-14 h-14 rounded-2xl">
+            <img src="{{ asset('images/logo.webp') }}" alt="" class="w-14 h-14 rounded-2xl" loading="lazy">
 
             <span class="self-center text-xl font-bold whitespace-nowrap text-slate-900 tracking-tight">
                 Mahasiswa<span class="text-primary">Hub</span>

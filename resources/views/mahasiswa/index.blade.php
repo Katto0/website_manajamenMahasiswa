@@ -2,18 +2,24 @@
 
 @section('content')
     <div class="space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center md:justify-center gap-4 p-4 md:p-16">
-            <div class="max-w-4xl mx-auto text-center space-y-6">
-                <h1 class="text-5xl md:text-6xl font-bold text-slate-900 tracking-tight">Manajemen Data Mahasiswa</h1>
-                <p class="text-sm md:text-lg text-slate-500">Kelola seluruh informasi mahasiswa dengan lebih mudah, cepat,
-                    dan
-                    terstruktur. Sistem ini membantu Anda menyimpan, mengelola, memperbarui, serta mencari data mahasiswa
-                    secara efisien dalam satu platform yang terintegrasi.</p>
+        <div class="relative flex items-center justify-center min-h-screen overflow-hidden rounded-3xl bg-slate-900 text-white p-6 md:p-16 text-center shadow-lg"
+            style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('{{ asset('images/background.webp') }}'); background-size: cover; background-position: center;">
+            <div class="max-w-4xl mx-auto flex flex-col items-center justify-center space-y-6 py-8">
+                <img src="{{ asset('images/logo.webp') }}" alt="Logo"
+                    class="w-32 h-32 object-cover rounded-2xl shadow-xl border-2 border-white/20">
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">Manajemen Data Mahasiswa
+                </h1>
+                <p class="text-sm md:text-lg text-slate-200 max-w-3xl leading-relaxed">
+                    Kelola seluruh informasi mahasiswa dengan lebih mudah, cepat, dan terstruktur. Sistem ini membantu Anda
+                    menyimpan, mengelola, memperbarui, serta mencari data mahasiswa secara efisien dalam satu platform yang
+                    terintegrasi.
+                </p>
             </div>
         </div>
 
         <!-- Filters: Search & Sort Forms -->
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+        <div id="daftar-mahasiswa" class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
             <form method="GET" action="{{ route('mahasiswa.index') }}" class="grid grid-cols-1 lg:grid-cols-12 gap-4">
 
                 <!-- Pencarian (Searching) -->
@@ -338,4 +344,20 @@
             @endif
         </div>
     </div>
+
+    @if (request()->has('search') || request()->has('sort_by') || request()->has('page'))
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const element = document.getElementById("daftar-mahasiswa");
+                if (element) {
+                    setTimeout(() => {
+                        element.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                    }, 100);
+                }
+            });
+        </script>
+    @endif
 @endsection
