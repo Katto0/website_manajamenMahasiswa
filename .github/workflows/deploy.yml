@@ -1,4 +1,4 @@
-name: CI/CD Pipeline - Website Manajemen Mahasiswa terbaru
+name: CI/CD Pipeline - Website Manajemen Mahasiswa terbaru 
 
 on:
   push:
