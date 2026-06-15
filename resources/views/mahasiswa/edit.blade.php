@@ -67,10 +67,14 @@
                         <!-- Pengerjaan Tugas -->
                         <div class="space-y-2">
                             <label for="tugas" class="text-xs font-semibold text-slate-600">Pengerjaan Tugas</label>
-                            <select name="tugas" id="tugas" 
-                                    class="w-full px-4 py-3 text-sm bg-slate-50 border @error('tugas') border-rose-300 focus:border-rose-500 focus:ring-rose-200 @else border-slate-200 focus:border-primary focus:ring-primary/20 @enderror rounded-xl focus:outline-none focus:bg-white focus:ring-2 transition-all">
-                                <option value="Selesai" {{ old('tugas', $student->getTugas()) === 'Selesai' ? 'selected' : '' }}>Selesai</option>
-                                <option value="Belum Selesai" {{ old('tugas', $student->getTugas()) === 'Belum Selesai' ? 'selected' : '' }}>Belum Selesai</option>
+                            <select name="tugas" id="tugas"
+                                class="w-full px-4 py-3 text-sm bg-slate-50 border @error('tugas') border-rose-300 focus:border-rose-500 focus:ring-rose-200 @else border-slate-200 focus:border-primary focus:ring-primary/20 @enderror rounded-xl focus:outline-none focus:bg-white focus:ring-2 transition-all">
+                                <option value="Selesai"
+                                    {{ old('tugas', $student->getTugas()) === 'Selesai' ? 'selected' : '' }}>Selesai
+                                </option>
+                                <option value="Belum Selesai"
+                                    {{ old('tugas', $student->getTugas()) === 'Belum Selesai' ? 'selected' : '' }}>Belum
+                                    Selesai</option>
                             </select>
                             @error('tugas')
                                 <p class="text-xs text-rose-650 mt-1 font-medium">{{ $message }}</p>
