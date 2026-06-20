@@ -78,12 +78,12 @@
                     <!-- NIM -->
                     <div class="space-y-2">
                         <label for="nim" class="text-xs font-semibold text-slate-600">NIM (Nomor Induk Mahasiswa)</label>
-                        <input type="text" name="nim" id="nim" value="{{ old('nim') }}" placeholder="Contoh: 2108561001" 
+                        <input type="text" name="nim" id="nim" value="{{ old('nim') }}" placeholder="Contoh: 241011450343" 
                                class="w-full px-4 py-3 text-sm bg-slate-50 border @error('nim') border-rose-300 focus:border-rose-500 focus:ring-rose-200 @else border-slate-200 focus:border-primary focus:ring-primary/20 @enderror rounded-xl focus:outline-none focus:bg-white focus:ring-2 transition-all font-mono">
                         @error('nim')
-                            <p class="text-xs text-rose-650 mt-1 font-medium">{{ $message }}</p>
+                            <p class="text-xs text-rose-655 mt-1 font-medium">{{ $message }}</p>
                         @enderror
-                        <p class="text-[10px] text-slate-400">NIM wajib berupa angka unik (8-12 digit).</p>
+                        <p class="text-[10px] text-slate-400">NIM wajib berupa angka unik (12 digit sesuai format).</p>
                     </div>
 
                     <!-- Jurusan -->

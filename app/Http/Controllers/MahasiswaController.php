@@ -87,13 +87,13 @@ class MahasiswaController extends Controller
     {
         // Validasi input menggunakan Regular Expression (Regex)
         $request->validate([
-            'nim' => ['required', 'regex:/^[0-9]{8,12}$/'], // NIM hanya boleh angka, panjang 8-12 karakter
+            'nim' => ['required', 'regex:/^[0-9]{12}$/'], // NIM hanya boleh angka, panjang 12 karakter
             'nama' => ['required', 'regex:/^[a-zA-Z\s]{3,50}$/'], // Nama hanya huruf & spasi, panjang 3-50
             'jenis_kelamin' => 'required|in:Laki-laki,Perempuan',
             'tugas' => 'required|in:Selesai,Belum Selesai',
             'jurusan' => ['required', 'regex:/^[a-zA-Z\s]{3,50}$/'], // Jurusan hanya huruf & spasi
         ], [
-            'nim.regex' => 'NIM harus berupa angka sepanjang 8 hingga 12 karakter.',
+            'nim.regex' => 'NIM harus berupa angka sepanjang 12 karakter.',
             'nama.regex' => 'Nama hanya boleh mengandung huruf dan spasi (minimal 3 karakter).',
             'jurusan.regex' => 'Jurusan hanya boleh mengandung huruf dan spasi.',
         ]);
