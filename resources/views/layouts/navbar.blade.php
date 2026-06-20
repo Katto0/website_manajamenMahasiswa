@@ -32,19 +32,7 @@
                     </div>
                     <ul class="p-1.5 text-sm font-semibold text-slate-700 space-y-0.5"
                         aria-labelledby="user-menu-button">
-                        <li>
-                            <a href="{{ route('mahasiswa.index') }}"
-                                class="inline-flex items-center w-full px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors">
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('mahasiswa.create') }}"
-                                class="inline-flex items-center w-full px-3 py-2 hover:bg-slate-50 hover:text-primary rounded-lg transition-colors">
-                                Tambah Mahasiswa
-                            </a>
-                        </li>
-                        <li class="border-t border-slate-100 my-1 pt-1">
+                        <li class="pt-1">
                             <form action="{{ route('logout') }}" method="POST" class="w-full">
                                 @csrf
                                 <button type="submit"

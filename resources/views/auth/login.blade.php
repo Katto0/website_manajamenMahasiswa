@@ -43,8 +43,9 @@
             <!-- Mobile Logo / Branding (hanya muncul di mobile) -->
             <div class="flex flex-col items-center text-center mb-6 md:hidden">
                 <div
-                    class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-xl shadow-md shadow-indigo-200 mb-3 animate-bounce">
-                    M
+                    class="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center shadow-md shadow-indigo-200 mb-3 animate-bounce">
+                    <img src="{{ asset('images/logo.webp') }}" alt="Logo"
+                        class="w-full h-full object-cover rounded-xl border border-white/10">
                 </div>
                 <h1 class="text-2xl font-extrabold text-gray-900 tracking-tight">
                     Mahasiswa<span class="text-primary">Hub</span>

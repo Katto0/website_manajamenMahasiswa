@@ -49,6 +49,9 @@
                             class="w-1/2 px-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-colors">
                             <option value="nama" {{ $sortBy === 'nama' ? 'selected' : '' }}>Nama Mahasiswa</option>
                             <option value="nim" {{ $sortBy === 'nim' ? 'selected' : '' }}>Nomor Induk Mahasiswa</option>
+                            <option value="jenis_kelamin" {{ $sortBy === 'jenis_kelamin' ? 'selected' : '' }}>Jenis Kelamin</option>
+                            <option value="tugas" {{ $sortBy === 'tugas' ? 'selected' : '' }}>Status Tugas</option>
+                            <option value="jurusan" {{ $sortBy === 'jurusan' ? 'selected' : '' }}>Jurusan</option>
                         </select>
                         <select name="sort_method"
                             class="w-1/2 px-4 py-2 text-sm bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:bg-white transition-colors">

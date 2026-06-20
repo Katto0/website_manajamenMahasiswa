@@ -122,8 +122,29 @@ class StudentManager
         for ($i = 0; $i < $n - 1; $i++) {
             for ($j = 0; $j < $n - $i - 1; $j++) {
                 
-                $val1 = ($sortBy === 'nim') ? $list[$j]->getNim() : $list[$j]->getNama();
-                $val2 = ($sortBy === 'nim') ? $list[$j + 1]->getNim() : $list[$j + 1]->getNama();
+                switch ($sortBy) {
+                    case 'nim':
+                        $val1 = $list[$j]->getNim();
+                        $val2 = $list[$j + 1]->getNim();
+                        break;
+                    case 'jenis_kelamin':
+                        $val1 = $list[$j]->getJenisKelamin();
+                        $val2 = $list[$j + 1]->getJenisKelamin();
+                        break;
+                    case 'tugas':
+                        $val1 = $list[$j]->getTugas();
+                        $val2 = $list[$j + 1]->getTugas();
+                        break;
+                    case 'jurusan':
+                        $val1 = $list[$j]->getJurusan();
+                        $val2 = $list[$j + 1]->getJurusan();
+                        break;
+                    case 'nama':
+                    default:
+                        $val1 = $list[$j]->getNama();
+                        $val2 = $list[$j + 1]->getNama();
+                        break;
+                }
 
                 if (strcasecmp($val1, $val2) > 0) {
                     // Tukar posisi (swap)
@@ -143,8 +164,29 @@ class StudentManager
             $minIdx = $i;
             for ($j = $i + 1; $j < $n; $j++) {
                 
-                $val1 = ($sortBy === 'nim') ? $list[$j]->getNim() : $list[$j]->getNama();
-                $val2 = ($sortBy === 'nim') ? $list[$minIdx]->getNim() : $list[$minIdx]->getNama();
+                switch ($sortBy) {
+                    case 'nim':
+                        $val1 = $list[$j]->getNim();
+                        $val2 = $list[$minIdx]->getNim();
+                        break;
+                    case 'jenis_kelamin':
+                        $val1 = $list[$j]->getJenisKelamin();
+                        $val2 = $list[$minIdx]->getJenisKelamin();
+                        break;
+                    case 'tugas':
+                        $val1 = $list[$j]->getTugas();
+                        $val2 = $list[$minIdx]->getTugas();
+                        break;
+                    case 'jurusan':
+                        $val1 = $list[$j]->getJurusan();
+                        $val2 = $list[$minIdx]->getJurusan();
+                        break;
+                    case 'nama':
+                    default:
+                        $val1 = $list[$j]->getNama();
+                        $val2 = $list[$minIdx]->getNama();
+                        break;
+                }
 
                 if (strcasecmp($val1, $val2) < 0) {
                     $minIdx = $j;
